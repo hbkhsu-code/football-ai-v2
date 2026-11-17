@@ -1,2 +1,9 @@
-# football-ai-v2
-足球 AI 全玩法分析系統 2.0
+
+mkdir -p extracted
+
+ZIP_FILE=$(find . -maxdepth 1 -type f -iname "*.zip" | head -n 1)
+
+unzip -o "$ZIP_FILE" -d extracted
+
+echo "===== 專案檔案清單 ====="
+find extracted -maxdepth 4 -type f | sort
